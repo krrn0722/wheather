@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:wheather/config/config.dart';
 import 'package:wheather/view/input_page.dart';
+import 'package:wheather/view/result_page.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/': (context) => InputPage(),
-        // '/result': ((context) => InputPage()),
+        '/result': ((context) => ResultPage()),
       },
     );
   }
