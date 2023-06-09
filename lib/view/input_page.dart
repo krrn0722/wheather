@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:wheather/Repository/repository.dart';
 import 'package:wheather/config/config.dart';
 import 'package:wheather/conponent/button_widget.dart';
 import 'package:wheather/view_model/providers.dart';
@@ -52,8 +51,7 @@ class InputPage extends ConsumerWidget {
               ButtonWidget(
                   label: '検索',
                   press: () {
-                    Repository repository = Repository();
-                    repository.fetchWeather(cityName.state);
+                    print('press');
                     Navigator.pushNamed(context, '/result');
                   })
             ],
